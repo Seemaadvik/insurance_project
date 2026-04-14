@@ -13,3 +13,11 @@ class AccountResponse(AccountBase):
 
     class Config:
         from_attributes = True
+
+class UserCreate(BaseModel):
+    name: str
+    password: str
+
+class UserLogin(BaseModel):
+    name: str
+    password: str

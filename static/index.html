@@ -1,17 +1,39 @@
 <!DOCTYPE html>
 <html>
 <head>
-    <title>Insurance UI</title>
+    <title>Insurance System</title>
 </head>
 
 <body>
 
-<h2>Insurance Accounts Dashboard</h2>
+<h2>Insurance Dashboard</h2>
+
+<hr>
+
+<!-- ================= REGISTER ================= -->
+<h3>Register User</h3>
+
+<input id="regName" placeholder="Name">
+<input id="regPassword" placeholder="Password" type="password">
+
+<button onclick="registerUser()">Register</button>
+
+<hr>
+
+<!-- ================= LOGIN ================= -->
+<h3>Login</h3>
+
+<input id="loginName" placeholder="Name">
+<input id="loginPassword" placeholder="Password" type="password">
+
+<button onclick="loginUser()">Login</button>
+
+<p id="loginStatus"></p>
 
 <hr>
 
 <!-- ================= CREATE ACCOUNT ================= -->
-<h3>Create Account</h3>
+<h3>Create Insurance Account</h3>
 
 <input id="name" placeholder="Name">
 <input id="policy" placeholder="Policy Type">
@@ -21,25 +43,25 @@
 
 <hr>
 
-<!-- ================= SEARCH ACCOUNT ================= -->
-<h3>Search Policy by ID</h3>
+<!-- ================= SEARCH ================= -->
+<h3>Search Account</h3>
 
-<input id="searchId" placeholder="Enter Policy ID">
+<input id="searchId" placeholder="Enter ID">
 <button onclick="searchAccount()">Search</button>
 
-<div id="result" style="margin-top:10px;"></div>
+<div id="result"></div>
 
 <hr>
 
 <!-- ================= TABLE ================= -->
-<h3>Accounts Table</h3>
+<h3>Accounts</h3>
 
-<table border="1" cellpadding="5">
+<table border="1">
     <thead>
         <tr>
             <th>ID</th>
             <th>Name</th>
-            <th>Policy Type</th>
+            <th>Policy</th>
             <th>Premium</th>
             <th>Action</th>
         </tr>
@@ -48,7 +70,6 @@
     <tbody id="tableData"></tbody>
 </table>
 
-<!-- ================= JS FILE ================= -->
 <script src="/static/app.js"></script>
 
 </body>
