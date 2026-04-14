@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Insurance UI</title>
+</head>
+
+<body>
+
+<h2>Insurance Accounts Dashboard</h2>
+
+<hr>
+
+<!-- ================= CREATE ACCOUNT ================= -->
+<h3>Create Account</h3>
+
+<input id="name" placeholder="Name">
+<input id="policy" placeholder="Policy Type">
+<input id="premium" placeholder="Premium">
+
+<button onclick="createAccount()">Create</button>
+
+<hr>
+
+<!-- ================= SEARCH ACCOUNT ================= -->
+<h3>Search Policy by ID</h3>
+
+<input id="searchId" placeholder="Enter Policy ID">
+<button onclick="searchAccount()">Search</button>
+
+<div id="result" style="margin-top:10px;"></div>
+
+<hr>
+
+<!-- ================= TABLE ================= -->
+<h3>Accounts Table</h3>
+
+<table border="1" cellpadding="5">
+    <thead>
+        <tr>
+            <th>ID</th>
+            <th>Name</th>
+            <th>Policy Type</th>
+            <th>Premium</th>
+            <th>Action</th>
+        </tr>
+    </thead>
+
+    <tbody id="tableData"></tbody>
+</table>
+
+<!-- ================= JS FILE ================= -->
+<script src="/static/app.js"></script>
+
+</body>
+</html>
