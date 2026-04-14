@@ -1,17 +1,21 @@
 from fastapi import FastAPI, Depends, HTTPException
 from fastapi.staticfiles import StaticFiles
 from fastapi.responses import FileResponse
+from fastapi.middleware.cors import CORSMiddleware
 from sqlalchemy.orm import Session
 import os
 
 from . import models, schemas, crud
 from .database import engine, SessionLocal, Base
-from fastapi.middleware.cors import CORSMiddleware
+
 # -------------------------
-# CREATE APP
+# APP INIT
 # -------------------------
 app = FastAPI(title="Insurance Account API")
 
+# -------------------------
+# CORS (for frontend UI)
+# -------------------------
 app.add_middleware(
     CORSMiddleware,
     allow_origins=["*"],
@@ -43,11 +47,11 @@ def get_db():
 
 
 # -------------------------
-# HOME API
+# HOME
 # -------------------------
 @app.get("/")
 def home():
-    return {"message": "Insurance API Running"}
+    return {"message": "Insurance API Running 🚀"}
 
 
 # -------------------------
